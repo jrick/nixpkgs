@@ -18,11 +18,11 @@ assert withBlas -> openblas != null && blas.implementation == "openblas" && lapa
 
 stdenv.mkDerivation rec {
   pname = "flint3";
-  version = "3.0.1";
+  version = "3.1.2";
 
   src = fetchurl {
     url = "https://www.flintlib.org/flint-${version}.tar.gz";
-    sha256 = "sha256-ezEaAFA6hjiB64F32+uEMi8pOZ89fXLzsaTJuh1XlLQ=";
+    sha256 = "sha256-/bOkMaN0ZINKz/O9wUX0/o0PlR3VMnxMb5P0y6xcJwA=";
   };
 
   patches = [
@@ -73,7 +73,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Fast Library for Number Theory";
-    license = licenses.gpl2Plus;
+    license = licenses.lgpl3Plus;
     maintainers = with maintainers; [ smasher164 ] ++ teams.sage.members;
     platforms = platforms.unix;
     homepage = "https://www.flintlib.org/";
